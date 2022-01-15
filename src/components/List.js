@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./List.css";
+import './List.css'
 
 // API
 import { getRepos } from '../api';
@@ -32,8 +32,8 @@ const List = () => {
     }, []);
 
     return (
-        <div>
-            <h2>List</h2>
+        <div className="container">
+            <h2 className="heading">List of Repositories</h2>
             {loading ? (
                 <h3>Loading...</h3>
             ) : error ? (
@@ -41,13 +41,15 @@ const List = () => {
             ) : (
                 <div>
                     {repos.map((repo) => (
-                        <div key={repo.id}>
-                            <h1>{repo.name}</h1>
-                            <p>{repo.description}</p>
-                            <span>Stars: {repo.stargazers_count}</span>
-                            <span>Issues: {repo.open_issues_count}</span>
-                            <p>Submitted 20 days ago by <span>{repo.owner.login}</span></p>
-                            <img src={repo.owner.avatar_url} alt="owner" />
+                        <div className="card" key={repo.id}>
+                            <img src={repo.owner.avatar_url} alt="avatar" />
+                            <div>
+                                <span className="name">{repo.name}</span>
+                                <span className="description">{repo.description}</span>
+                                <p className="stars">Stars: {repo.stargazers_count}</p>
+                                <p className="issues">Issues: {repo.open_issues_count}</p>
+                                <p className="time-interval">Submitted 20 days ago by {repo.owner.login}</p>
+                            </div>
                         </div>
                     ))}
                 </div>

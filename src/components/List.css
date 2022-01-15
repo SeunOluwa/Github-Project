@@ -1,0 +1,57 @@
+.heading {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.container {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.card {
+    display: flex;
+    background: white;
+    border-radius: 0.25rem;
+    overflow: hidden;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+}
+
+img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.75rem;
+}
+
+.description {
+    display: block;
+    padding-top: 1rem;
+}
+
+.stars {
+    border: 3px solid black;
+    padding: 2px;
+    margin-right: 30px;
+    margin-top: 34px;
+    display: inline-block;
+}
+
+.issues {
+    border: 3px solid black;
+    padding: 2px;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.time-interval {
+    display: inline-block;
+}
